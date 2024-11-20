@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Prediction Result</title>
+    <title>Ticket Categorization Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Prediction Result</h1>
-    <p><strong>Ticket Text:</strong> {{ ticket_text }}</p>
-    <p><strong>Ticket Level:</strong> {{ ticket_level }}</p>
-    <br>
-    <a href="/">Go Back</a>
+    <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="card-header bg-success text-white">
+                <h3 class="text-center">Categorization Result</h3>
+            </div>
+            <div class="card-body">
+                <p class="fs-5"><strong>Ticket Description:</strong></p>
+                <p class="text-muted border p-3 rounded">{{ ticket_text }}</p>
+                <p class="fs-5"><strong>Predicted Level:</strong></p>
+                <p class="text-primary display-6">{{ ticket_level }}</p>
+                <div class="text-center mt-4">
+                    <a href="/" class="btn btn-primary btn-lg">Categorize Another Ticket</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
